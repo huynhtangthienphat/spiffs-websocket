@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ESP IOT DASHBOARD</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="favicon.png">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="topnav">
+            <h1>SENSOR READINGS (WEBSOCKET)</h1>
+        </div>
+        <div class="content">
+            <div class="card-grid">
+                <div class="card">
+                    <p class="card-title"><i class="fas fa-thermometer-threequarters" style="color:#059e8a;"></i> Nhiet Do</p>
+                    <p class="reading"><span id="temperature"></span> &deg;C</p>
+                </div>
+                <div class="card">
+                    <p class="card-title"> Do Am</p>
+                    <p class="reading"><span id="humidity"></span> &percnt;</p>
+                </div>
+                <div class="card">
+                    <p class="card-title"> Ap Suat</p>
+                    <p class="reading"><span id="pressure"></span> hpa</p>
+                </div>
+                <div class="card">
+                    <p class="card-title"> Text</p>
+                    <p class="reading"><span id="text"></span> hpa</p>
+                </div>
+                <div class="card">
+                    <p class="card-title"> Value One</p>
+                    <p class="reading"><span id="value_one"></span> hpa</p>
+                </div>
+                <div class="card">
+                    <p class="card-title"> Value Two</p>
+                    <p class="reading"><span id="value_two"></span> hpa</p>
+                </div>
+                <div class="card">
+                    <h2>BUTTON</h2>
+                    <h3>GPIO 2</h3>
+                    <button onclick=sendData() class=button>ON</button>
+                    <button onclick=sendData1() class=button>OFF</button>
+                    <h3>GPIO 4</h3>
+                    <button onclick=sendData2() class=button>ON</button>
+                    <button onclick=sendData3() class=button>OFF</button>
+                </div>
+
+            </div>
+        </div>
+        <script src="scripts.js"></script>
+    </body>
+</html>
